@@ -98,6 +98,10 @@ export default function BridgeSetup() {
               <span className="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded-full min-w-[24px] text-center">8</span>
               <span className="text-blue-700"><strong>Press Enter</strong> to run the script</span>
             </div>
+            <div className="flex items-start gap-2">
+              <span className="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded-full min-w-[24px] text-center">9</span>
+              <span className="text-blue-700"><strong>Go to the trading page</strong> or refresh if already there</span>
+            </div>
           </div>
 
           <div className="bg-gray-900 rounded-lg p-4 mb-4">
@@ -161,7 +165,20 @@ export default function BridgeSetup() {
             </button>
           </div>
 
-          <div className="mt-4 p-3 bg-yellow-50 border border-yellow-200 rounded">
+          <div className="mt-4 p-3 bg-green-50 border border-green-200 rounded">
+            <h4 className="text-green-800 font-medium text-sm mb-2">🔍 After pasting the script, look for these messages:</h4>
+            <div className="text-green-700 text-xs font-mono space-y-1">
+              <div>🚀 Pocket Option Bridge Starting...</div>
+              <div>✅ Bridge script installed! Monitoring...</div>
+              <div>📡 Found existing WebSocket: wss://...</div>
+              <div>🔗 Successfully connected to your trading app!</div>
+            </div>
+            <p className="text-green-800 text-sm mt-2">
+              <strong>No connection?</strong> Navigate to the trading interface or refresh the page.
+            </p>
+          </div>
+          
+          <div className="mt-3 p-3 bg-yellow-50 border border-yellow-200 rounded">
             <p className="text-yellow-800 text-sm">
               <strong>Note:</strong> This manual setup is only needed when the app is deployed. 
               When running locally, the automatic browser launch will work normally.

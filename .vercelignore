@@ -1,0 +1,9 @@
+# Files to ignore during Vercel deployment
+node_modules
+.next
+.env*
+!.env.example
+*.log
+.DS_Store
+README.md
+DEPLOYMENT.md

@@ -81,7 +81,7 @@ export default function BridgeSetup() {
             </div>
             <div className="flex items-start gap-2">
               <span className="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded-full min-w-[24px] text-center">5</span>
-              <span className="text-blue-700"><strong>Click where you see the ">" prompt</strong> at the bottom</span>
+              <span className="text-blue-700"><strong>Click where you see the &quot;&gt;&quot; prompt</strong> at the bottom</span>
             </div>
             <div className="flex items-start gap-2">
               <span className="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded-full min-w-[24px] text-center">6</span>

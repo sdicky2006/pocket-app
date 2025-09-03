@@ -12,8 +12,10 @@ export async function GET() {
       "3. Log in to your account",
       "4. Open browser Developer Tools (F12)",
       "5. Go to Console tab",
-      "6. Copy and paste the bridge script below",
-      "7. Press Enter to connect"
+      "6. Type: allow pasting (then press Enter)",
+      "7. Copy and paste the bridge script below",
+      "8. Press Enter to run the script",
+      "9. Go to the trading page or refresh if already there"
     ],
     bridgeScript: `
 // Pocket Option Bridge Script - Paste this in browser console

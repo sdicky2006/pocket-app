@@ -11,6 +11,7 @@ import Screener from '@/components/Screener';
 import AutoTradeControls from '@/components/AutoTradeControls';
 import AutoSubscribeControls from '@/components/AutoSubscribeControls';
 import ThemeToggle from '@/components/ThemeToggle';
+import BridgeSetup from '@/components/BridgeSetup';
 
 type SignalResult = {
   side: 'CALL' | 'PUT' | 'NEUTRAL';
@@ -229,6 +230,9 @@ export default function Home() {
 
       {/* Main Content */}
       <main className="container py-4">
+        {/* Bridge Setup Instructions for Deployed Environment */}
+        <BridgeSetup />
+        
         <div className="row g-4">
           {/* Trading Panel */}
           <div className="col-lg-8">

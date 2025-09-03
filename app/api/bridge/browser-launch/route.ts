@@ -49,6 +49,7 @@ export async function GET() {
   console.log('✅ Bridge script installed! WebSocket messages will be forwarded.');
 })();
 `,
+    shortScript: `(function(){const o=WebSocket;WebSocket=function(u,p){const w=new o(u,p);if(u.includes('po.market')||u.includes('pocketoption')){console.log('📡 Connected:',u);w.addEventListener('message',e=>{fetch('/api/bridge/ws-stream',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({type:'ws_message',data:e.data,timestamp:Date.now()})}).catch(console.error);});}return w;};console.log('✅ Bridge installed!');})();`,
     status: 'manual_setup_required'
   };
   

@@ -63,14 +63,41 @@ export default function BridgeSetup() {
           </p>
 
           <div className="space-y-3 mb-4">
-            {setupInstructions.instructions?.map((instruction: string, index: number) => (
-              <div key={index} className="flex items-start gap-2">
-                <span className="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded-full min-w-[24px] text-center">
-                  {index + 1}
-                </span>
-                <span className="text-blue-700">{instruction}</span>
+            <div className="flex items-start gap-2">
+              <span className="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded-full min-w-[24px] text-center">1</span>
+              <span className="text-blue-700">Open your browser and go to https://pocketoption.com</span>
+            </div>
+            <div className="flex items-start gap-2">
+              <span className="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded-full min-w-[24px] text-center">2</span>
+              <span className="text-blue-700">Log in to your Pocket Option account</span>
+            </div>
+            <div className="flex items-start gap-2">
+              <span className="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded-full min-w-[24px] text-center">3</span>
+              <span className="text-blue-700"><strong>Press F12</strong> to open Developer Tools</span>
+            </div>
+            <div className="flex items-start gap-2">
+              <span className="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded-full min-w-[24px] text-center">4</span>
+              <span className="text-blue-700"><strong>Click "Console" tab</strong> (usually the 2nd tab)</span>
+            </div>
+            <div className="flex items-start gap-2">
+              <span className="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded-full min-w-[24px] text-center">5</span>
+              <span className="text-blue-700"><strong>Click where you see the ">" prompt</strong> at the bottom</span>
+            </div>
+            <div className="flex items-start gap-2">
+              <span className="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded-full min-w-[24px] text-center">6</span>
+              <div className="text-blue-700">
+                <strong>Enable pasting first:</strong><br/>
+                Type: <code className="bg-blue-100 px-1 rounded">allow pasting</code> and press Enter
               </div>
-            ))}
+            </div>
+            <div className="flex items-start gap-2">
+              <span className="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded-full min-w-[24px] text-center">7</span>
+              <span className="text-blue-700"><strong>Now copy and paste the script below</strong> (Ctrl+V)</span>
+            </div>
+            <div className="flex items-start gap-2">
+              <span className="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded-full min-w-[24px] text-center">8</span>
+              <span className="text-blue-700"><strong>Press Enter</strong> to run the script</span>
+            </div>
           </div>
 
           <div className="bg-gray-900 rounded-lg p-4 mb-4">
@@ -97,6 +124,23 @@ export default function BridgeSetup() {
               {setupInstructions.bridgeScript}
             </pre>
           </div>
+
+          {setupInstructions.shortScript && (
+            <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4 mb-4">
+              <div className="flex items-center gap-2 mb-2">
+                <AlertCircle className="h-4 w-4 text-yellow-600" />
+                <span className="text-yellow-800 font-medium text-sm">Can't paste? Use this shorter version to type:</span>
+              </div>
+              <div className="bg-gray-900 rounded p-2">
+                <pre className="text-green-300 text-xs overflow-x-auto whitespace-pre-wrap">
+                  {setupInstructions.shortScript}
+                </pre>
+              </div>
+              <p className="text-yellow-700 text-xs mt-2">
+                This shorter script does the same thing - easier to type manually if pasting doesn't work.
+              </p>
+            </div>
+          )}
 
           <div className="flex gap-3">
             <a
